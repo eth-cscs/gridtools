@@ -1,6 +1,7 @@
 gridtools_add_unit_test(test_sid_as_const SOURCES test_sid_as_const.cpp)
 gridtools_add_unit_test(test_sid_block SOURCES test_sid_block.cpp)
 gridtools_add_unit_test(test_sid_composite SOURCES test_sid_composite.cpp)
+gridtools_add_unit_test(test_sid_easy_composite SOURCES test_sid_easy_composite.cpp)
 gridtools_add_unit_test(test_sid_concept SOURCES test_sid_concept.cpp)
 gridtools_add_unit_test(test_sid_contiguous SOURCES test_sid_contiguous.cpp)
 gridtools_add_unit_test(test_sid_delegate SOURCES test_sid_delegate.cpp)
