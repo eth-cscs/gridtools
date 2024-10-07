@@ -32,9 +32,7 @@ namespace gridtools {
             struct simple_ptr_holder {
                 T m_val;
 
-#if defined(__cpp_deduction_guides) and __cpp_deduction_guides >= 201907
-// CTAD for aggregates works
-#else
+#if not GT_HAS_AGGREGATE_CTAD
                 // Enables CTAD in C++17.
                 simple_ptr_holder() = default;
                 GT_TARGET GT_FORCE_INLINE constexpr simple_ptr_holder(T const &ptr) : m_val{ptr} {}

@@ -10,6 +10,10 @@
 #pragma once
 #include <cassert>
 
+#if __has_include(<version>)
+#include <version>
+#endif
+
 namespace gridtools {
     using int_t = int;
     using uint_t = unsigned int;
@@ -83,4 +87,10 @@ namespace gridtools {
 #define GT_NVCC_WORKAROUND_1766 1
 #else
 #define GT_NVCC_WORKAROUND_1766 0
+#endif
+
+#if defined(__cpp_deduction_guides) && __cpp_deduction_guides >= 201907L
+#define GT_HAS_AGGREGATE_CTAD 1
+#else
+#define GT_HAS_AGGREGATE_CTAD 0
 #endif

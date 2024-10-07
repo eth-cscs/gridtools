@@ -27,7 +27,10 @@ namespace gridtools::fn {
         struct scan_pass {
             F m_f;
             Projector m_p;
+
+#if not GT_HAS_AGGREGATE_CTAD
             constexpr GT_FUNCTION scan_pass(F f, Projector p = {}) : m_f(f), m_p(p) {}
+#endif
         };
 
         template <class T>
