@@ -21,8 +21,8 @@ namespace gridtools::fn {
 
         using sid_neighbor_table::as_neighbor_table;
 
-        using edge_dim_t = integral_constant<int_t, 0>;
-        using edge_to_cell_dim_t = integral_constant<int_t, 1>;
+        struct edge_dim_t{};
+        struct edge_to_cell_dim_t{};
 
         TEST(sid_neighbor_table, correctness) {
             constexpr std::size_t num_elements = 3;
